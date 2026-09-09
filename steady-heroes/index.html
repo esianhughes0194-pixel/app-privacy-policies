@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steady Heroes Privacy Policy</title>
+<style>
+  :root {
+    --paper: #f7f4fb;
+    --surface: #ffffff;
+    --ink: #1a0a3c;
+    --muted: #675e82;
+    --accent: #6d3fd1;
+    --accent-bright: #8a5cf0;
+    --line: #e4defa;
+    --good: #2f7a52;
+    --good-bg: #eaf4ee;
+    --shadow: 0 1px 2px rgba(26, 10, 60, 0.04), 0 8px 24px -12px rgba(26, 10, 60, 0.14);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #12081f;
+      --surface: #1c1030;
+      --ink: #ede8f9;
+      --muted: #a99bc9;
+      --accent: #b28cf7;
+      --accent-bright: #c9adfa;
+      --line: #33224f;
+      --good: #6fcf97;
+      --good-bg: rgba(111, 207, 151, 0.1);
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Karla", ui-sans-serif, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
+
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+  .brand-dot { width: 12px; height: 12px; border-radius: 4px; background: linear-gradient(135deg, var(--accent-bright), var(--accent)); flex: none; }
+  .brand-name { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+  h1 {
+    font-family: "Fraunces", ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 4.4vw, 2.85rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 20px;
+  }
+
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 6px 20px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12.5px; color: var(--muted);
+    padding-bottom: 32px; margin-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .meta span b { color: var(--ink); font-weight: 600; }
+
+  .lede { font-size: 1.08rem; color: var(--muted); max-width: 56ch; margin: 0 0 48px; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+
+  section { margin-bottom: 44px; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; }
+  .section-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px; font-weight: 600; color: var(--accent); flex: none; }
+
+  h2 {
+    font-family: "Fraunces", ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: -0.005em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  section p, section li { max-width: 62ch; color: var(--ink); }
+  section p { margin: 0 0 14px; }
+  section a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  section a:hover { text-decoration-color: var(--accent); }
+
+  .table-wrap { overflow-x: auto; }
+  table {
+    width: 100%; border-collapse: collapse; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    box-shadow: var(--shadow); margin-top: 6px;
+  }
+  thead th {
+    text-align: left; font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); padding: 14px 18px; border-bottom: 1px solid var(--line);
+  }
+  tbody td { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .status {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 600; color: var(--good); background: var(--good-bg);
+    padding: 4px 10px 4px 8px; border-radius: 999px; white-space: nowrap;
+  }
+  .status svg { flex: none; }
+
+  ul.plain { margin: 0; padding: 0; list-style: none; }
+  ul.plain li { position: relative; padding-left: 20px; margin-bottom: 10px; }
+  ul.plain li::before {
+    content: ""; position: absolute; left: 0; top: 0.65em;
+    width: 6px; height: 6px; border-radius: 2px; background: var(--accent);
+  }
+
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 24px; box-shadow: var(--shadow);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .contact-card .label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .contact-card a { font-family: "Fraunces", ui-serif, Georgia, serif; font-weight: 600; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .contact-card a:hover { color: var(--accent); }
+
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 520px) {
+    .wrap { padding: 44px 18px 90px; }
+    .contact-card { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-dot"></div>
+    <div class="brand-name">Steady Heroes</div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+
+  <div class="meta">
+    <span>Effective <b>9 September 2026</b></span>
+    <span>Applies to <b>iOS app</b></span>
+    <span>Contact <b>esianhughes0194@gmail.com</b></span>
+  </div>
+
+  <p class="lede"><strong>The short version:</strong> Steady Heroes doesn't collect your data. Everything you enter — hero names, routines, calm breaks, allowance — stays on that one device. There's no account, no server, and nothing to leak.</p>
+
+  <section>
+    <div class="section-head"><span class="section-num">01</span><h2>What we collect</h2></div>
+    <p>Steady Heroes is built to work entirely on your device. The table below covers everything the app stores, and where it goes.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Data</th><th>Where it's stored</th></tr></thead>
+        <tbody>
+          <tr><td>Hero's name &amp; birthday (optional)</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On this device only</span></td></tr>
+          <tr><td>Steps, routines &amp; streaks</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On this device only</span></td></tr>
+          <tr><td>Calm break usage</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On this device only</span></td></tr>
+          <tr><td>Star rewards &amp; reward menu</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On this device only</span></td></tr>
+          <tr><td>Cash allowance &amp; payout history (optional)</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>On this device only</span></td></tr>
+          <tr><td>Face ID / Touch ID</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Never leaves iOS</span></td></tr>
+          <tr><td>Name, email, contacts, location</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Not collected</span></td></tr>
+          <tr><td>Analytics or advertising data</td><td><span class="status"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Not collected</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">02</span><h2>Face ID &amp; Touch ID</h2></div>
+    <p>If you turn it on in Settings, Steady Heroes can ask iOS to check Face ID or Touch ID before a parent confirms a completed step. That check happens entirely inside iOS's own Secure Enclave — the app only ever receives a yes or no. We never see, store, or have access to any biometric data.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">03</span><h2>Notifications</h2></div>
+    <p>Steady Heroes can send one gentle daily reminder that today's steps are waiting. It's scheduled locally by iOS on your device, isn't routed through any server we operate, and no notification content is sent anywhere.</p>
+  </section>
+
+  <section id="no-tracking">
+    <div class="section-head"><span class="section-num">04</span><h2>No ads, no analytics, no tracking</h2></div>
+    <ul class="plain">
+      <li>Steady Heroes has no advertising SDKs and shows no ads.</li>
+      <li>It doesn't use analytics or crash-reporting tools that phone home.</li>
+      <li>It doesn't track you across other apps or websites.</li>
+      <li>It has no login, so there's no account to be tied to your identity.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">05</span><h2>Children's privacy (COPPA &amp; GDPR)</h2></div>
+    <p>Steady Heroes is a routine-and-calm-break support tool that a parent or guardian sets up and manages for their family, including any children who use it. We built it with children's privacy as a first principle, in line with the Children's Online Privacy Protection Act (COPPA), the EU's General Data Protection Regulation (GDPR), and the App Store's Kids guidelines:</p>
+    <ul class="plain">
+      <li><strong>No personal information is collected, transmitted, or shared — from children or adults.</strong> Hero names, birthdays, routines and calm-break history are typed in or generated by using the app, and saved only in the app's local storage on that device. We have no servers, no backend, and no database, so we never receive, see, or store this information ourselves.</li>
+      <li><strong>Birthday is optional and never used for anything beyond the app itself.</strong> It is not used for age verification, is not required to set up a hero, and is never transmitted anywhere. Steady Heroes is fully functional without it.</li>
+      <li><strong>We don't ask for parental contact information</strong> — no email, phone number, or address is collected from a parent or a child, for consent purposes or otherwise.</li>
+      <li><strong>No third-party analytics or advertising.</strong> Steady Heroes contains no third-party analytics SDKs, ad networks, or tracking libraries of any kind — see <a href="#no-tracking">Section 04</a>. Nothing about how a child uses the app is ever shared with a third party.</li>
+      <li><strong>A parent or guardian is always in control.</strong> The adult who installs the app sets up each hero, can view or edit any hero's data, and can permanently delete a hero's information at any time from <em>Settings → Remove Hero</em>.</li>
+    </ul>
+    <p>Because no data ever leaves the device, there is nothing for us to disclose to, or delete on request from, any third party — deleting a hero or the app itself is immediate and complete. If you have questions about how Steady Heroes handles a child's information, contact us using the details in <a href="#contact">Section 08</a>.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">06</span><h2>Deleting your data</h2></div>
+    <p>You're always in control. Remove a hero at any time from <em>Settings → Remove Hero</em> to erase their routines, calm-break history, and rewards. Deleting the app removes everything else immediately, since nothing is kept anywhere but your device.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">07</span><h2>Changes to this policy</h2></div>
+    <p>If this policy ever changes — for instance, if a future update adds an optional online feature — we'll update the effective date above and describe the change here before it applies.</p>
+  </section>
+
+  <section id="contact" style="margin-bottom: 0;">
+    <div class="section-head"><span class="section-num">08</span><h2>Questions</h2></div>
+    <div class="contact-card">
+      <div><div class="label">Get in touch</div><a href="mailto:esianhughes0194@gmail.com">esianhughes0194@gmail.com</a></div>
+    </div>
+  </section>
+
+  <footer>Steady Heroes is a support tool, not a substitute for professional therapy or medical advice. Developed independently by Emily Hughes.</footer>
+</div>
+</body>
+</html>
