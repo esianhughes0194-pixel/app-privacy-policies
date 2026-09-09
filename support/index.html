@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>App Support</title>
+<style>
+  :root {
+    --paper: #f7f6f3;
+    --surface: #ffffff;
+    --ink: #201d1a;
+    --muted: #6b6459;
+    --accent: #b9800e;
+    --line: #e5e0d6;
+    --shadow: 0 1px 2px rgba(32, 29, 26, 0.04), 0 8px 24px -12px rgba(32, 29, 26, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14120f;
+      --surface: #1e1b17;
+      --ink: #f0ece4;
+      --muted: #a89e8d;
+      --accent: #ffd166;
+      --line: #322d26;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Karla", ui-sans-serif, system-ui, sans-serif;
+    font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 64px 24px 110px; }
+  .eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  h1 { font-family: "Fraunces", ui-serif, Georgia, serif; font-weight: 600; font-size: clamp(2rem, 4.4vw, 2.6rem); line-height: 1.1; letter-spacing: -0.01em; margin: 0 0 16px; text-wrap: balance; }
+  p.lede { color: var(--muted); max-width: 58ch; margin: 0 0 44px; font-size: 1.05rem; }
+  nav.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+  nav.jump a {
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; text-decoration: none;
+    color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 14px;
+  }
+  nav.jump a:hover { border-color: var(--accent); }
+  section { margin-bottom: 48px; }
+  h2 { font-family: "Fraunces", ui-serif, Georgia, serif; font-weight: 600; font-size: 1.35rem; margin: 0 0 18px; }
+  .qa { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow); margin-bottom: 12px; }
+  .qa .q { font-weight: 600; margin-bottom: 6px; }
+  .qa .a { color: var(--muted); margin: 0; }
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 24px; box-shadow: var(--shadow);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .contact-card .label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .contact-card a { font-family: "Fraunces", ui-serif, Georgia, serif; font-weight: 600; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .contact-card a:hover { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  a.plain { color: var(--accent); }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Emily Hughes — Family Apps</div>
+  <h1>Support</h1>
+  <p class="lede">Support for Steady Heroes, Screen Time Bank, Potty Hero, and Turn Tracker. These apps run entirely on your device — there's no account to reset and nothing syncing in the background, so most issues come down to a couple of iOS settings.</p>
+
+  <nav class="jump">
+    <a href="#face-id">Face ID</a>
+    <a href="#notifications">Notifications</a>
+    <a href="#data">My data</a>
+    <a href="#bug">Bugs &amp; feature requests</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="face-id">
+    <h2>Face ID / Touch ID</h2>
+    <div class="qa">
+      <p class="q">Confirming a step keeps failing even though Face ID works elsewhere on my phone</p>
+      <p class="a">Open iOS Settings for the app and make sure "Require Face ID" is toggled the way you expect, then check Settings → Face ID &amp; Passcode to confirm Face ID is enrolled and enabled for other apps. The app only ever asks iOS for a yes/no — it never sees your biometric data itself.</p>
+    </div>
+    <div class="qa">
+      <p class="q">I don't want the Face ID step at all</p>
+      <p class="a">It's optional in every app. Turn it off from the in-app Settings screen and confirmations happen with a tap instead.</p>
+    </div>
+  </section>
+
+  <section id="notifications">
+    <h2>Notifications</h2>
+    <div class="qa">
+      <p class="q">I'm not getting the daily reminder</p>
+      <p class="a">Check iOS Settings → Notifications → (app name) and make sure notifications are allowed, and check whether a Focus or Do Not Disturb mode is silencing them. Reminders are scheduled locally on your device — there's no server involved, so there's nothing on our end to check.</p>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>My data</h2>
+    <div class="qa">
+      <p class="q">How do I delete a child's data?</p>
+      <p class="a">Open Settings inside the app and use Remove Hero / Remove Kid. This permanently erases that profile's routines, tasks, stars, or history. Deleting the app removes everything else immediately.</p>
+    </div>
+    <div class="qa">
+      <p class="q">Where is my data stored?</p>
+      <p class="a">On your device only. None of these apps have a server, an account system, or analytics — see each app's privacy policy for the full breakdown.</p>
+    </div>
+  </section>
+
+  <section id="bug">
+    <h2>Bugs &amp; feature requests</h2>
+    <div class="qa">
+      <p class="q">I found a bug, or have an idea for a feature</p>
+      <p class="a">Email the address below with the app name, your iOS version, and what happened (a screenshot helps). These are actively maintained solo apps, so real reports genuinely shape what gets built next.</p>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-bottom: 0;">
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <div><div class="label">Get in touch</div><a href="mailto:esianhughes0194@gmail.com">esianhughes0194@gmail.com</a></div>
+    </div>
+  </section>
+
+  <footer>These apps are developed independently by Emily Hughes. Privacy policies: <a class="plain" href="../">esianhughes0194-pixel.github.io/app-privacy-policies</a></footer>
+</div>
+</body>
+</html>
